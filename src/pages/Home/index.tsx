@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Background from '../../images/background.jpg';
 import { useCounter } from '../CustomHook/useCounter';
 import { useCalculate } from '../CustomHook/useCalculate';
+import { Row, Col } from 'react-bootstrap';
 
 const Background_App = styled.div`
     /* background-image: url(${Background}); */
@@ -102,7 +103,6 @@ function Home() {
     //useCounter
     const { counterComponent, increaseCounter, decreaseCounter, resetValue } = useCounter();
     const { calculateComponent, calculate_plus } = useCalculate();
-
     // console.log('isClose :', isClose)
     // console.log("Is use effect" ,isShowText)
     // console.log(InputNumber_One)

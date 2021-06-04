@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
-
+import { AppContext, AppProvider } from '../Contexts/AppContexts';
+import StudentBoard from './StudentBoard';
+import StudentInput from './StudentInput';
 const Container_useContext = styled.div`
     display: flex;
     flex-direction: column;
@@ -10,7 +12,11 @@ const Container_useContext = styled.div`
 const exampleuseContext = () => {
     return (
         <div>
-            <Container_useContext>Example useContext</Container_useContext>
+            <AppProvider>
+                <Container_useContext>Example useContext</Container_useContext>
+                <StudentInput />
+                <StudentBoard />
+            </AppProvider>
         </div>
     );
 };
